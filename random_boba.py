@@ -13,7 +13,7 @@ def search_store_on_yelp(location):
         "term": "boba",
         "location": location,
         "categories": "boba",
-        "limit": 15,
+        "limit": 12,
         "offset": random_offset
     }
 
@@ -29,7 +29,7 @@ def search_store_on_yelp(location):
 
 def boba_picker():
     print("Welcome to the Automatic Boba Picker!")
-    location = input("Enter your city: ").strip()
+    location = input("Enter your city or zip code: ").strip()
 
     # use Yelp api to find boba stores
     boba_stores = search_store_on_yelp(location)
