@@ -12,7 +12,7 @@ def search_store_on_yelp(location):
     params = {
         "term": "boba",
         "location": location,
-        "categories": "boba",
+        "categories": "bubble tea",
         "limit": 12,
         "offset": random_offset
     }
