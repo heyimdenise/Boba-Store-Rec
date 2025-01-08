@@ -6,12 +6,15 @@ def search_store_on_yelp(location):
     headers = {"Authorization": f"Bearer {API_Key}"}
     url = "https://api.yelp.com/v3/businesses/search"
 
+    random_offset = random.randint(0, 50)
+
     # api request parameters
     params = {
         "term": "boba",
         "location": location,
         "categories": "boba",
-        "limit": 15
+        "limit": 15,
+        "offset": random_offset
     }
 
     response = requests.get(url, headers=headers, params=params)
