@@ -11,7 +11,7 @@ def search_store_on_yelp(location):
         "term": "boba",
         "location": location,
         "categories": "boba",
-        "limit": 10
+        "limit": 15
     }
 
     response = requests.get(url, headers=headers, params=params)
@@ -25,7 +25,7 @@ def search_store_on_yelp(location):
 
 
 def boba_picker():
-    print("Welcome to the Automatic Deicision Maker: Boba Store Edition!")
+    print("Welcome to the Automatic Boba Picker!")
     location = input("Enter your city: ").strip()
 
     # use Yelp api to find boba stores
@@ -35,7 +35,7 @@ def boba_picker():
         print("\nNo boba stores found. Please try again.")
         return
 
-    print(f"Found {len(boba_stores)} boba stores in {location}.")
+    print(f"\nFound {len(boba_stores)} boba stores in {location}.\n")
 
     filtered_stores = []
     for store in boba_stores:
